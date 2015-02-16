@@ -1,0 +1,129 @@
+/* CSS Document */
+@charset "UTF-8";
+html,body{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	background:#4E4040; /* jusque la c'est ce que tu avais mis ;) */ 
+	overflow-x:hidden; /* on empeche le defillement horizontall */ 
+	overflow-y:scroll; /* on accepte le defillement vertical */ }
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.casse{margin-top:10px;}
+.entete{border:1px groove;
+	z-index:99;
+	display:block;
+	width:100%;
+	background:#E8C86E;
+	font-family: girls, "Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+.logo {
+	display:block;
+	text-align:center;
+	vertical-align:middle;
+}
+.status_bar{height:20px;}
+.logo img{
+	width: 200px;
+	}
+
+.info{
+	text-align:center; 
+	margin-top:15px;
+	font-size:18px;	}
+.case{
+	display:block;
+	background-color:#E2DCDC;
+	height:70px;	
+	margin-left:auto;
+	margin-right:auto;
+	/*margin-bottom:5px;*/
+	text-align:center;
+	border:1px groove grey;
+	/*border-radius: 100px;*/
+	max-width:600px;
+	}
+.listview a{
+text-decoration:none; 
+color:black;
+}
+/* FORM LOG IN*/
+.input-group{margin-bottom:5px;}
+.center{text-align:center;}
+.loggin{display:none;}
+#log_retour{display:none;}
+.btn{margin-left:5px;margin-right:5px;}
+.biere{
+	height:50px;
+	/*width:50px;*/
+	margin:8px;
+	}
+.menu_deroule{display:none;width:200px;
+margin-left:auto;margin-right:auto;}
+.menu_deroule ul{padding-left:0px;}
+.menu_deroule li{
+	list-style-type:none;
+	border:1px groove grey;
+	margin-bottom:5px;
+	padding:10px;
+	}
+.titre{
+	font: bold;
+	font-size:16px;
+	font-family:girls, "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-align:center;
+	vertical-align:middle;}
+
+.fleche{
+	height: 50px;
+	margin-top:10px;
+	margin-bottom:10px;}
+.listview{
+	display:block;
+	margin-top:15px;
+	}
+.contact{
+	background-color:#E1D6D7;
+	text-align:left;
+	}
+.btn_menu{width:70px;}
+.plan{text-align:center;}
+.menu{;display:block;}
+.information{float:right; margin-right:10px;margin-top:10px;}
+.information img{width:30px;}
+.contact img{max-width:170px;
+border:5px groove grey;}
+footer{height:100px; display:block;}
+.titre_contact{color:black;
+text-align:}
+@font-face { 	
+font-family: "girls"; 	
+src: url('font/girls.ttf');
+src: url('font/girls.eot'); }
+
+@media screen and (max-height: 600px)
+{
+    /* Rédigez vos propriétés CSS ici */
+	.logo img{
+	width: 10em;
+	}
+	.menu{float:right;}
+	.comment{float:left;}
+	.logo{text-align:center;}
+	.entete{
+		padding-bottom:15px;
+		height:auto;}
+	.listview{margin-top:100px;}
+}
+
+@media screen and (max-width: 600px)
+{
+    /* Rédigez vos propriétés CSS ici */
+.listview{margin-top:0px;}
+}
