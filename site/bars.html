@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="noselect">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, user-scalable=no">
+         
+         <meta name="apple-mobile-web-app-capable" content="yes">
+         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!--<link href="../bootflat/css/bootstrap.min.css" rel="stylesheet">-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+        <link rel="apple-touch-icon" href="../img/fmb.png" />
+        <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)"href="../img/mila.jpg">
+       <script src="../bootstrap/js/jquery-1.11.1.js"></script>
+        <script src="../bootstrap/js/bootstrap.js"></script>
+		<!--<script src="../bootflat/js/jquery-1.10.1.min.js"></script> -->
+        <style type="text/css">
+		a{color:black;}
+		a:visited{color:black; }
+		a:hover{color:black; }
+		a:active{color:black; }
+        </style>
+        <!--<script src="../bootflat/js/bootstrap.min.js"></script>-->
+        <script src="../js/home.js"></script>
+        <!--<script src="../js/main_js.js"></script>-->
+		<title>FindMyBeer</title>
+</head>
+
+<body>
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1 well">
+    	<center><h3>Gestion des bars</h3></center>
+    </div>
+	<div class="col-xs-10 col-xs-offset-1">
+    	<table class="table">
+        	<tr class="active">
+            	<th>#</th>
+                <th>Bar</th>
+                <th>Ville</th>
+            </tr>
+            
+            <tr class="active" style="text-align:center;"><td></td><td>
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:15px;"></span>
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0x;"></span>
+            </td><td>
+             <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:15px;"></span>
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0px;"></span>
+            </td></tr>
+            
+            <tr class="active"><td>1</td><td>La Faluche</td><td>Lille</td></tr>
+            <tr class="active"><td>2</td><td>Le Berkley</td><td>Lille</td></tr>
+            <tr class="active"><td>3</td><td>Le Trading Bar</td><td>Lille</td></tr>
+            <tr class="active"><td>4</td><td>Le Pearl</td><td>Lille</td></tr>
+            <tr class="active"><td>5</td><td>L'Estaminet</td><td>Paris</td></tr>
+            <tr class="active"><td>6</td><td>La Faluche</td><td>Paris</td></tr>
+		
+        </table>
+        
+        <form>
+            <button class="btn btn-default" type="button" value="Input" style="width:100%; margin-right:0px; margin-left:0px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+        </form>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1 well" style="margin-top:150px;">
+    	<center><h3>Gestion des bières</h3></center>
+    </div>
+	<div class="col-xs-10 col-xs-offset-1">
+    <form class="form-inline">
+    <center>
+    <input type="email" class="form-control col-xs-5" id="exampleInputEmail1" placeholder="Nom de la Bière" style="border-radius:60px;">
+    <button type="button" class="btn btn-default" style="border-radius:60px; margin:15px;">Rechercher</button>
+    </center>
+    </form>
+    	<table class="table">
+        	<tr class="active">
+            	<th>#</th>
+                <th>Bière</th>
+                <th>Degré</th>
+            </tr>
+            
+            <tr class="active" style="text-align:center;"><td></td><td>
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:15px;"></span>
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0x;"></span>
+            </td><td>
+             <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:15px;"></span>
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0px;"></span>
+            </td></tr>
+            
+            <tr class="active"><td>1</td><td>Kronenbourg</td><td>6,2°</td></tr>
+            <tr class="active"><td>2</td><td>Rince Cochon</td><td>5,4°</td></tr>
+            <tr class="active"><td>3</td><td>Duvel</td><td>3,7°</td></tr>
+            <tr class="active"><td>4</td><td>Cuvée des Trolls</td><td>4,8°</td></tr>
+            <tr class="active"><td>5</td><td>Amstel</td><td>7,2°</td></tr>
+            <tr class="active"><td>6</td><td>Leffe</td><td>8,5°</td></tr>
+		
+        </table>
+        
+        <form>
+            <button class="btn btn-default" type="button" value="Input" style="width:100%; margin:0px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+        </form>
+        
+    </div>
+    <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 well" style="margin-top:150px;">
+    	<center>
+        <h3>La Faluche <small>(Lille)</small></h3>
+        <h4>Gestion des bières</h4>
+        </center>
+    </div>
+	<div class="col-xs-10 col-xs-offset-1">
+    <form class="form-inline">
+    <center>
+    <input type="email" class="form-control col-xs-5" id="exampleInputEmail1" placeholder="Nom de la Bière" style="border-radius:60px;">
+    <button type="button" class="btn btn-default" style="border-radius:60px; margin:15px;">Rechercher</button>
+    </center>
+    </form>
+    	<table class="table">
+        	<tr class="active">
+            	<th>#</th>
+                <th>Bière</th>
+                <th>Type</th>
+                <th>Degré</th>
+                <th></th>
+            </tr>
+            
+            <tr class="active" style="text-align:center;"><td></td><td>
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:15px;"></span>
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0x;"></span>
+            </td><td>
+             <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:15px;"></span>
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0px;"></span>
+            </td><td>
+             <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:15px;"></span>
+            <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0px;"></span>
+            </td><td></td></tr>
+            
+            <tr class="active"><td>1</td><td>Kronenbourg</td><td>Blonde</td><td>6,2°</td><td><center><a href="#"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a></center></td></tr>
+            <tr class="active"><td>2</td><td>Rince Cochon</td><td>Rouge</td><td>5,4°</td><td><center><a href="#"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a></center></td></tr>
+            <tr class="active"><td>3</td><td>Duvel</td><td>Brune</td><td>3,7°</td><td><center><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></center></td></tr>
+            <tr class="active"><td>4</td><td>Cuvée des Trolls</td><td>Blonde</td><td>4,8°</td><td><center><a href="#"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a></center></td></tr>
+            <tr class="active"><td>5</td><td>Amstel</td><td>Blanche</td><td>7,2°</td><td><center><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></center></td></tr>
+            <tr class="active"><td>6</td><td>Leffe</td><td>Brune</td><td>8,5°</td><td><center><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></center></td></tr>
+		
+        </table>
+        
+    </div>
+    <div class="col-xs-10 col-xs-offset-1" style="height:100px;">
+    </div>
+</div>
+</body>
+</html>
