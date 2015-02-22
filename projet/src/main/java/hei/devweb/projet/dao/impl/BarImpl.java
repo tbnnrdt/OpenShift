@@ -21,10 +21,11 @@ public class BarImpl{
 	}
 
 	
-	public ArrayList<Bar> getListeBar() {
+	public ArrayList<Bar> getListeBar(Integer idBiere) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `bar` ORDER BY `idBar` ");
+			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `bar` LEFT JOIN `tableBarBiere` ON bar.idBar=tableBarBiere.idBar WHERE tableBarBiere.idBiere=? ORDER BY bar.idBar");
+			stmt.setInt(1,idBiere);
 			ResultSet rs = stmt.executeQuery();
 			ArrayList<Bar> listeBarTotale=new ArrayList<Bar>();
 			while (rs.next()){

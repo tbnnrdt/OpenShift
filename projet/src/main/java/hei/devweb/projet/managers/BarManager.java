@@ -18,8 +18,8 @@ public class BarManager implements BarDao{
 		return instance;
 	}
 
-	public List<Bar> listerBars() {
-		return new ArrayList<Bar>(BarImpl.getInstance().getListeBar());
+	public List<Bar> listerBars(Integer id) {
+		return new ArrayList<Bar>(BarImpl.getInstance().getListeBar(id));
 	}
 	
 	public Bar getBar(Integer id) {

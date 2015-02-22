@@ -7,7 +7,7 @@ import java.util.List;
 public interface BarDao {
 
 
-	public List<Bar> listerBars() ;
+	public List<Bar> listerBars(Integer id) ;
 	
 	public Bar getBar(Integer id) ;
 	

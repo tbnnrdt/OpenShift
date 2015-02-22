@@ -51,11 +51,10 @@
             </div>
             </div>
             </div>
-              <c:forEach var="biere" items="${listeBieres}">
-				 <a class="case" href="bar?id=${biere.idBiere}">
+              <c:forEach var="bar" items="${listeBars}">
+				 <a class="case" href="bar?id=${bar.idBar}">
                 	<img src="img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
-                	<span class="titre">${biere.nomBiere}</span>
-                	<span class="infos">${biere.degresBiere}°</span>
+                	<span class="titre">${bar.nomBar}</span>
 
                 	<img class="fleche" src="img/fleche.png" alt="fleche">
             </a>			   			
