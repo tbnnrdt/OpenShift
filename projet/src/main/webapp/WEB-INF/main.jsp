@@ -41,7 +41,7 @@
                 <img src="img/logo.png" alt="erreurs">
             </div>
             <div class="info">
-                Choisir sa bière
+                Choisir sa bière petite pute
             </div>
         </div>
         
