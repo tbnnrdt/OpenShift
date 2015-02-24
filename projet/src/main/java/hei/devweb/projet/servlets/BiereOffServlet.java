@@ -14,38 +14,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/bar")
-public class ListeBarServlet extends HttpServlet{
+@WebServlet("/biereofflocalisation")
+public class BiereOffServlet extends HttpServlet{
 
 @Override
 protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 		throws ServletException, IOException {
-String ville="test";
-
-try{ville = req.getParameter("ville");}
-catch(NullPointerException e){e.printStackTrace();}
+	
 try{
-	Integer id = Integer.parseInt(req.getParameter("id"));
+	String ville = req.getParameter("ville");
+	req.setAttribute("ville", ville);
 	
-	if(ville==null){
-		List<Bar> bars = BarManager.getInstance().listerBars(id);
-		req.setAttribute("listeBars", bars);
-	}
-	
-	else{
-		List<Bar> bars = BarManager.getInstance().listerBarsOffLocalisation(id,ville);
-		req.setAttribute("listeBars", bars);
-	}
-	
-	RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/bar.jsp");
+	List<Biere> bieres = BiereManager.getInstance().listerBieres();
+	req.setAttribute("listeBieres", bieres);
+
+	RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/biereOffloc.jsp");
 	view.forward(req, resp);
+
 }
 catch (NumberFormatException e) {
-	resp.sendRedirect("accueil");
+	resp.sendRedirect("accueilofflocalisation");
 }
 
+	
+	
 }
-
 
 
 }

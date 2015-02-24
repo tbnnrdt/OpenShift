@@ -35,6 +35,7 @@
         	<img src="img/logo.png" alt="erreurs">
         </div>
         <div class="info">
+        MODE OFFLOCALISATION
         	Choisir sa bière
         </div>
     </div>
@@ -52,7 +53,7 @@
             </div>
             </div>
               <c:forEach var="biere" items="${listeBieres}">
-				 <a class="case" href="bar?id=${biere.idBiere}">
+				 <a class="case" href="bar?id=${biere.idBiere}&ville=${ville}">
                 	<img src="img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
                 	<span class="titre">${biere.nomBiere}</span>
                 	<span class="infos">${biere.degresBiere}°</span>
@@ -63,6 +64,5 @@
 			 </c:forEach>
          
     </div>
-    <a href="accueilofflocalisation">Mode hors localisation</a>
 	</body>
 </html>
