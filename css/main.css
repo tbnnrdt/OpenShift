@@ -5,8 +5,8 @@ html,body{
 	padding:0px;
 	width:100%;
 	background:#4E4040; /* jusque la c'est ce que tu avais mis ;) */ 
-	overflow-x:hidden; /* on empeche le defillement horizontall */ 
-	overflow-y:scroll; /* on accepte le defillement vertical */ }
+	/*overflow-x:hidden; /* on empeche le defillement horizontall */ 
+	/*overflow-y:scroll; /* on accepte le defillement vertical */ }
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -63,7 +63,13 @@ color:black;
 	height:50px;
 	/*width:50px;*/
 	margin:8px;
+	float:left;
 	}
+
+
+    .vertical-offset-100 {
+        padding-top: 100px;
+    }
 .menu_deroule{display:none;width:200px;
 margin-left:auto;margin-right:auto;}
 .menu_deroule ul{padding-left:0px;}
@@ -83,9 +89,11 @@ margin-left:auto;margin-right:auto;}
 .fleche{
 	height: 50px;
 	margin-top:10px;
-	margin-bottom:10px;}
+	margin-bottom:10px;
+	margin-right:15px;
+	float:right;}
 .listview{
-	display:block;
+	/*display:block;*/
 	margin-top:15px;
 	}
 .contact{
@@ -102,10 +110,64 @@ border:5px groove grey;}
 footer{height:100px; display:block;}
 .titre_contact{color:black;
 text-align:}
+.info_bdd{margin-top:20px;padding:0px; text-align:left;margin-left:20%;}
 @font-face { 	
 font-family: "girls"; 	
 src: url('font/girls.ttf');
 src: url('font/girls.eot'); }
+
+    .img-responsive {
+    display: block;
+	width:100%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    }
+    .panel {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    }
+	button{margin:10px;width:90%;}
+	.login{width:80%; margin:10px;}
+	.panel-body{margin-top:30px;padding:0px; text-align:center;}
+	.panel-default{padding:0px;}
+	.btn-danger{margin-top:30px;margin-bottom:10px;}
+	a{margin:10px;width:90%;}
+	
+			.rating {
+			width: 100%;
+			margin: 0 auto ;
+			font-size: 35px;
+			overflow:hidden;
+		}
+		.rating span {
+			float:right;
+			color: #aaa;
+			margin:5px;
+			text-decoration: none;
+			-webkit-transition: color .4s;
+			-moz-transition: color .4s;
+			-o-transition: color .4s;
+			transition: color .4s;
+		}
+		.rating span:hover,
+		.rating span:hover ~ span,
+		.rating span:focus,
+		.rating span:focus ~ span		{
+			color: orange;
+			cursor: pointer;
+		}
+		
+				.rating2 {
+			direction: rtl;
+		}
+		.rating2 span {
+			float:none
+		}
 
 @media screen and (max-height: 600px)
 {
@@ -113,7 +175,7 @@ src: url('font/girls.eot'); }
 	.logo img{
 	width: 10em;
 	}
-	.menu{float:right;}
+	.menu{float:left;}
 	.comment{float:left;}
 	.logo{text-align:center;}
 	.entete{
