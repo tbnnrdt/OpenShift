@@ -13,7 +13,7 @@ function successCallback(position){
 	 $('.ok_longi').text(longi);
 }
 });
-/*
+
 var directionsDisplay;
 var lat = 44.8534100;
 var longi = 3.3488000;
@@ -119,4 +119,3 @@ function calcRoute() {
 $(document).ready(function(){initialize();})
 //});
 
-*/

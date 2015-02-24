@@ -16,7 +16,7 @@
         <style type="text/css"></style>
         <script src="bootflat/js/bootstrap.min.js"></script>
         <script src="js/home.js"></script>
-        <!--<script src="../js/main_js.js"></script>-->
+        <script src="js/main_js.js"></script>
 		<title>FindMyBeer</title>
 	</head>
 	

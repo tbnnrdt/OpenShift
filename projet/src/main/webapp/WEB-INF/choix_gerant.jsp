@@ -7,15 +7,15 @@
          <meta name="apple-mobile-web-app-capable" content="yes">
          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <!--<link href="../bootflat/css/bootstrap.min.css" rel="stylesheet">-->
-		<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link href="../css/main.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
         <link rel="apple-touch-icon" href="../img/fmb.png" />
         <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)"href="../img/mila.jpg">
-       <script src="../bootflat/js/jquery-1.10.1.min.js"></script>
-        <script src="../bootstrap/js/bootstrap.js"></script>
-		<!--<script src="../bootflat/js/jquery-1.10.1.min.js"></script> -->
-        <!--<script src="../bootflat/js/bootstrap.min.js"></script>-->
-        <script src="../js/home.js"></script>
+       <script src="bootflat/js/jquery-1.10.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+		<!--<script src="bootflat/js/jquery-1.10.1.min.js"></script> -->
+        <!--<script src="bootflat/js/bootstrap.min.js"></script>-->
+        <script src="js/home.js"></script>
         <!--<script src="../js/main_js.js"></script>-->
 		<title>FindMyBeer</title>
 </head>

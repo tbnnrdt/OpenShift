@@ -28,7 +28,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 	List<Biere> bieres = BiereManager.getInstance().listerBieres();
 	req.setAttribute("listeBieres", bieres);
 
-	RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/main.jsp");
+	RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/choix_gerant.jsp");
 	view.forward(req, resp);
 }
 
