@@ -35,34 +35,17 @@
         	<img src="img/logo.png" alt="erreurs">
         </div>
         <div class="info">
-        	Choisir sa bière
+        MODE OFFLOCALISATION <br/>
+        Choisir sa ville
         </div>
     </div>
-    <div class="listview">
-            <div class="case">
-            <div class="row">
-            <div class="col-xs-6 casse">
-            <span>Latitude</span><br />
-            <span class="ok_lat"><small>Pas d'info</small></span>
-            </div>
-            <div class="col-xs-6 casse">
-            <span>Longitude</span><br />
-            <span class="ok_longi"><small>Pas d'info</small></span>
-            </div>
-            </div>
-            </div>
-              <c:forEach var="biere" items="${listeBieres}">
-				 <a class="case" href="bar?id=${biere.idBiere}">
-                	<img src="img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
-                	<span class="titre">${biere.nomBiere}</span>
-                	<span class="infos">${biere.degresBiere}°</span>
-
-                	<img class="fleche" src="img/fleche.png" alt="fleche">
-            </a>			   			
-				
-			 </c:forEach>
-         
-    </div>
-    <a href="accueilofflocalisation">Mode hors localisation</a>
+    <form action="biereofflocalisation">
+    <select name="ville">
+    <c:forEach var="ville" items="${listeVilles}">
+    <option value="${ville}">${ville}</option>
+    </c:forEach>
+    </select>
+    <button>Valider</button>
+    </form>
 	</body>
 </html>

@@ -28,7 +28,7 @@ public class BiereImpl {
 			ResultSet rs = stmt.executeQuery();
 			ArrayList<Biere> listeBiereTotale=new ArrayList<Biere>();
 			while (rs.next()){
-				Biere biere=new Biere(rs.getInt(1), rs.getString(2), rs.getDouble(3),rs.getDouble(4));
+				Biere biere=new Biere(rs.getInt(1), rs.getString(2),rs.getDouble(3));
             	listeBiereTotale.add(biere);
             }
 			return listeBiereTotale;
@@ -47,7 +47,7 @@ public class BiereImpl {
 			stmt.setInt(1,id);
 			ResultSet rs = stmt.executeQuery();
 			rs.next();
-			Biere biere=new Biere(rs.getInt(1), rs.getString(2), rs.getDouble(3),rs.getDouble(4));
+			Biere biere=new Biere(rs.getInt(1), rs.getString(2),rs.getDouble(3));
 			return biere;
 
 		} catch (SQLException e) {
@@ -60,11 +60,10 @@ public class BiereImpl {
 		int i=0;
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("INSERT INTO `prestation`(`idBiere`,`nomBiere`,`prixBiere`,`degresBiere`) VALUES (?,?,?)");
+			PreparedStatement stmt = connection.prepareStatement("INSERT INTO `prestation`(`idBiere`,`nomBiere`,`degresBiere`) VALUES (?,?,?)");
 			stmt.setInt(1,biere.getIdBiere());
 			stmt.setString(2,biere.getNomBiere());
-			stmt.setDouble(3,biere.getPrixBiere());
-			stmt.setDouble(4, biere.getDegresBiere());
+			stmt.setDouble(3, biere.getDegresBiere());
 			i=stmt.executeUpdate();
 		
 			return i;
@@ -83,11 +82,10 @@ public class BiereImpl {
 		int i=0;
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("UPDATE `biere` SET `nomBiere`=?,`prixBiere`=?,`degresBiere`=? WHERE `idBiere`=?");
+			PreparedStatement stmt = connection.prepareStatement("UPDATE `biere` SET `nomBiere`=?,`degresBiere`=? WHERE `idBiere`=?");
 			stmt.setString(1,biere.getNomBiere());
-			stmt.setDouble(2,biere.getPrixBiere());
-			stmt.setDouble(3, biere.getDegresBiere());
-			stmt.setInt(4,biere.getIdBiere());
+			stmt.setDouble(2, biere.getDegresBiere());
+			stmt.setInt(3,biere.getIdBiere());
 
 			i=stmt.executeUpdate();
 		

@@ -4,14 +4,12 @@ public class Biere {
 
 	private Integer idBiere;
 	private String nomBiere;
-	private double prixBiere;
 	private double degresBiere;
 	
-	public Biere(Integer idBiere, String nomBiere, double prixBiere, double degresBiere) {
+	public Biere(Integer idBiere, String nomBiere, double degresBiere) {
 		super();
 		this.idBiere = idBiere;
 		this.nomBiere = nomBiere;
-		this.prixBiere=prixBiere;
 		this.degresBiere=degresBiere;
 		}
 
@@ -39,13 +37,6 @@ public class Biere {
 		this.nomBiere = nomBiere;
 	}
 
-	public double getPrixBiere() {
-		return prixBiere;
-	}
-
-	public void setPrixBiere(double prixBiere) {
-		this.prixBiere = prixBiere;
-	}
 
 	
 	}

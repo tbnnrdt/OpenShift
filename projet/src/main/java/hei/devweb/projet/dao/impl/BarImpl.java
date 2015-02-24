@@ -21,10 +21,11 @@ public class BarImpl{
 	}
 
 	
-	public ArrayList<Bar> getListeBar() {
+	public ArrayList<Bar> getListeBar(Integer idBiere) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `bar` ORDER BY `idBar` ");
+			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `bar` LEFT JOIN `tableBarBiere` ON bar.idBar=tableBarBiere.idBar WHERE tableBarBiere.idBiere=? ORDER BY bar.idBar");
+			stmt.setInt(1,idBiere);
 			ResultSet rs = stmt.executeQuery();
 			ArrayList<Bar> listeBarTotale=new ArrayList<Bar>();
 			while (rs.next()){
@@ -40,6 +41,26 @@ public class BarImpl{
 	}
 
 
+	public ArrayList<Bar> getListeBarOffLocalisation(Integer idBiere,String ville) {
+		try {
+			Connection connection = DataSourceProvider.getDataSource().getConnection();
+			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `bar` LEFT JOIN `tableBarBiere` ON bar.idBar=tableBarBiere.idBar WHERE tableBarBiere.idBiere=? AND bar.villeBar=? ORDER BY bar.idBar");
+			stmt.setInt(1,idBiere);
+			stmt.setString(2,ville);
+			ResultSet rs = stmt.executeQuery();
+			ArrayList<Bar> listeBarTotale=new ArrayList<Bar>();
+			while (rs.next()){
+				Bar bar=new Bar(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4));
+				listeBarTotale.add(bar);
+            }
+			return listeBarTotale;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public Bar getBar(int id) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
@@ -60,7 +81,6 @@ public class BarImpl{
 		int i=0;
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			//PreparedStatement stmt = connection.prepareStatement("INSERT INTO `prestation`(`idPrestation`,`titrePrestation`,`sportPrestation`,`prix1soiree`,`prix2soirees`,`nbr_participant`,`duree`,`bool_caution`,`resume`) VALUES ( '"+presta.getId()+"','"+presta.getTitre()+ "','"+presta.getSport()+ "','"+presta.getPrix1soiree()+ "','"+presta.getPrix2soirees()+ "','"+presta.getNbr_participant()+ "','"+presta.getDuree()+ "','"+presta.isBool_caution()+ "','"+presta.getPrix_caution()+ "','"+presta.getResume()+ "')");
 			PreparedStatement stmt = connection.prepareStatement("INSERT INTO `option`(`idBar`,`nomBar`,`heureOuverture`,`heureFermeture`) VALUES (?,?,?,?)");
 			stmt.setInt(1,bar.getIdBar());
 			stmt.setString(2,bar.getNomBar());
@@ -109,6 +129,29 @@ public class BarImpl{
 			}
 			return i;
 	    	
+		}
+
+		
+		public ArrayList<String> getListeVille() {
+			String newVille="";
+			try {
+				Connection connection = DataSourceProvider.getDataSource().getConnection();
+				PreparedStatement stmt = connection.prepareStatement("SELECT `villeBar` FROM `bar` ORDER BY `villeBar` ASC");
+				ResultSet rs = stmt.executeQuery();
+				ArrayList<String> listeVilleTotale=new ArrayList<String>();
+				while (rs.next()){
+					if(newVille.equals(rs.getString(1))){}
+					else{
+					newVille=rs.getString(1);
+					listeVilleTotale.add(newVille);
+					}
+	            }
+				return listeVilleTotale;
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			return null;
 		}
 
 		

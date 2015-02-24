@@ -18,8 +18,12 @@ public class BarManager implements BarDao{
 		return instance;
 	}
 
-	public List<Bar> listerBars() {
-		return new ArrayList<Bar>(BarImpl.getInstance().getListeBar());
+	public List<Bar> listerBars(Integer id) {
+		return new ArrayList<Bar>(BarImpl.getInstance().getListeBar(id));
+	}
+	
+	public List<Bar> listerBarsOffLocalisation(Integer id,String ville) {
+		return new ArrayList<Bar>(BarImpl.getInstance().getListeBarOffLocalisation(id, ville));
 	}
 	
 	public Bar getBar(Integer id) {
@@ -34,6 +38,9 @@ public class BarManager implements BarDao{
 
 	public void supprimeBar(Integer id) {
 		 BarImpl.getInstance().supprimeBar(id);
+	}
+	public List<String> listerVilles() {
+		return new ArrayList<String>(BarImpl.getInstance().getListeVille());
 	}
 	
 }
