@@ -53,7 +53,7 @@
             </div>
               <c:forEach var="bar" items="${listeBars}">
 				 <a class="case" href="bar?id=${bar.idBar}">
-                	<img src="img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
+                	<img src="img/cuvee_des_trolls.jpg" alt="${bar.nomBar}" class="img-circle biere">
                 	<span class="titre">${bar.nomBar}</span>
 
                 	<img class="fleche" src="img/fleche.png" alt="fleche">
