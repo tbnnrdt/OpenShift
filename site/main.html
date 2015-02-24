@@ -42,6 +42,9 @@
                 Choisir sa bière
             </div>
         </div>
+        
+        
+             
         <div class="listview">
             <div class="case">
                 <div class="row">
@@ -57,12 +60,24 @@
             </div>
             
             <div class="case">
-                <div class="col-xs-12">
+            
+            <c:forEach var="biere" items="${listeBieres}">
+            <div class="col-xs-12">
                     <div class="row">
                          <div class="col-xs-2">
                             <img src="../img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
                          </div>
                          <div class="col-xs-8">
+				 <a class="case" href="bar?id=${biere.idBiere}">
+                	<img src="img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
+                	<span class="titre">${biere.nomBiere}</span>
+                	<span class="infos">${biere.degresBiere}°</span>
+
+                	<img class="fleche" src="img/fleche.png" alt="fleche">
+            </a>			   			
+				
+			 </c:forEach>
+                
                             <div class="info_bdd">
                                 <span class="titre">Cuvée des Trolls</span>
                                 <span class="degre">6,9°</span>
