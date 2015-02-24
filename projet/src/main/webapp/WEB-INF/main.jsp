@@ -87,7 +87,7 @@
     
         <footer>
             <div class="col-md-3 col-sm-offset-9 ">
-                <a href="login.html" class="btn btn-default demande_log" type="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                <a href="login" class="btn btn-default demande_log" type="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
             </div>
         </footer>
 	</body>
