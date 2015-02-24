@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Dim 22 Février 2015 à 16:10
+-- Généré le :  Mar 24 Février 2015 à 14:44
 -- Version du serveur :  5.5.38
 -- Version de PHP :  5.5.14
 
@@ -42,16 +42,19 @@ CREATE TABLE `bar` (
 `idBar` int(11) NOT NULL,
   `nomBar` varchar(30) NOT NULL,
   `heureOuverture` int(11) NOT NULL,
-  `heureFermeture` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+  `heureFermeture` int(11) NOT NULL,
+  `villeBar` varchar(30) NOT NULL,
+  `geolocalisationBar` int(11) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `bar`
 --
 
-INSERT INTO `bar` (`idBar`, `nomBar`, `heureOuverture`, `heureFermeture`) VALUES
-(1, 'La Faluche', 9, 23),
-(2, 'Le Berkeley', 10, 22);
+INSERT INTO `bar` (`idBar`, `nomBar`, `heureOuverture`, `heureFermeture`, `villeBar`, `geolocalisationBar`) VALUES
+(1, 'La Faluche', 9, 23, 'Lille', 0),
+(2, 'Le Berkeley', 10, 22, 'Paris', 0),
+(3, 'le Bar test', 1, 18, 'Paris', 0);
 
 -- --------------------------------------------------------
 
@@ -62,7 +65,6 @@ INSERT INTO `bar` (`idBar`, `nomBar`, `heureOuverture`, `heureFermeture`) VALUES
 CREATE TABLE `biere` (
 `idBiere` int(11) NOT NULL,
   `nomBiere` varchar(30) NOT NULL,
-  `prixBiere` double NOT NULL,
   `degresBieres` double NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
@@ -70,10 +72,10 @@ CREATE TABLE `biere` (
 -- Contenu de la table `biere`
 --
 
-INSERT INTO `biere` (`idBiere`, `nomBiere`, `prixBiere`, `degresBieres`) VALUES
-(1, 'Cuvée des Trolls', 5, 6.9),
-(2, 'Rince Cochon', 5.5, 8),
-(3, 'Desperados', 4.5, 7.8);
+INSERT INTO `biere` (`idBiere`, `nomBiere`, `degresBieres`) VALUES
+(1, 'Cuvée des Trolls', 6.9),
+(2, 'Rince Cochon', 8),
+(3, 'Desperados', 7.8);
 
 -- --------------------------------------------------------
 
@@ -97,18 +99,19 @@ CREATE TABLE `gerant` (
 CREATE TABLE `tableBarBiere` (
 `idCorrespondance` int(11) NOT NULL,
   `idBar` int(11) NOT NULL,
-  `idBiere` int(11) NOT NULL
+  `idBiere` int(11) NOT NULL,
+  `prixBiere` double NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `tableBarBiere`
 --
 
-INSERT INTO `tableBarBiere` (`idCorrespondance`, `idBar`, `idBiere`) VALUES
-(1, 1, 3),
-(2, 1, 2),
-(3, 2, 1),
-(4, 2, 3);
+INSERT INTO `tableBarBiere` (`idCorrespondance`, `idBar`, `idBiere`, `prixBiere`) VALUES
+(1, 1, 3, 0),
+(2, 1, 2, 0),
+(3, 2, 1, 0),
+(4, 2, 3, 0);
 
 --
 -- Index pour les tables exportées
@@ -157,7 +160,7 @@ MODIFY `idAdmin` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `bar`
 --
 ALTER TABLE `bar`
-MODIFY `idBar` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `idBar` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `biere`
 --
