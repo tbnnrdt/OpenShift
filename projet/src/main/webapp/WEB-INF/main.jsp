@@ -41,7 +41,7 @@
                 <img src="img/logo.png" alt="erreurs">
             </div>
             <div class="info">
-                Choisir sa bière petite pute
+                Choisir sa bière
             </div>
         </div>
         
@@ -81,7 +81,6 @@
                 </div> 
              </a>
              </c:forEach>
-           grosse bite  
         <!-- Ferme Listeview -->         
         </div>
     
