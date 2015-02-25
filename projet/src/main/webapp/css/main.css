@@ -4,9 +4,11 @@ html,body{
 	margin:0px;
 	padding:0px;
 	width:100%;
+	display:block;
+	position:relative;
 	background:#4E4040; /* jusque la c'est ce que tu avais mis ;) */ 
-	/*overflow-x:hidden; /* on empeche le defillement horizontall */ 
-	/*overflow-y:scroll; /* on accepte le defillement vertical */ }
+	overflow-x:hidden; /* on empeche le defillement horizontall */ 
+	overflow-y:scroll; /* on accepte le defillement vertical */ }
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -22,7 +24,7 @@ html,body{
 	width:100%;
 	background:#E8C86E;
 	font-family: girls, "Trebuchet MS", Arial, Helvetica, sans-serif;}
-
+.bodytest{display:relative;}
 .logo {
 	display:block;
 	text-align:center;
@@ -70,15 +72,61 @@ color:black;
     .vertical-offset-100 {
         padding-top: 100px;
     }
-.menu_deroule{display:none;width:200px;
-margin-left:auto;margin-right:auto;}
-.menu_deroule ul{padding-left:0px;}
+
+.menu_deroule{display:none;width:300px;height:100%;position:absolute;left:0px;top:0px;bottom:0px;}
+.menu_deroule ul{margin:50px;
+-webkit-padding-start: 0px;
+list-style-type: none;}
 .menu_deroule li{
 	list-style-type:none;
-	border:1px groove grey;
-	margin-bottom:5px;
+	margin-bottom:10px;
 	padding:10px;
+	padding-left:40px;
+	color:orange;
+ 	background-image: url(../img/biere.png);
+	background-size:30px;
+  background-repeat: no-repeat;
+  background-position: 0 0.4em;
 	}
+.bodytest{position:relative;}	
+.transBG {
+	left: 300px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	width:100%;
+	height:100%;
+	position: absolute;
+	display: none;
+	background-color: black;
+	opacity: 0.5;
+	filter: alpha(opacity=60);
+	z-index:99999;
+}
+
+#slider
+{
+    position: absolute;
+}
+.left-pos
+{
+    left: 0;
+    transition-property: left;
+    transition-duration: 2s;
+    transition-timing: ease;
+    transition-delay: 0;
+}
+.right-pos
+{
+	position:relative;
+    left: 300px;
+    transition-property: left;
+    transition-duration: 2s;
+    transition-timing: ease;
+    transition-delay: 0;
+}
+
+
 .titre{
 	font: bold;
 	font-size:16px;
@@ -95,6 +143,8 @@ margin-left:auto;margin-right:auto;}
 .listview{
 	/*display:block;*/
 	margin-top:15px;
+	position:relative;
+	height: 1000px;;
 	}
 .contact{
 	background-color:#E1D6D7;
@@ -136,7 +186,7 @@ src: url('font/girls.eot'); }
 	.panel-body{margin-top:30px;padding:0px; text-align:center;}
 	.panel-default{padding:0px;}
 	.btn-danger{margin-top:30px;margin-bottom:10px;}
-	.panel-body a {margin:10px;width:90%;}
+	a{margin:10px;width:90%;}
 	
 			.rating {
 			width: 100%;

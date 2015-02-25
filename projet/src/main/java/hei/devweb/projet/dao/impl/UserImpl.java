@@ -38,28 +38,7 @@ public class UserImpl {
 		return null;
 	}
 
-
-	public ArrayList<Bar> getListeBarOffLocalisation(Integer idBiere,String ville) {
-		try {
-			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `bar` LEFT JOIN `tableBarBiere` ON bar.idBar=tableBarBiere.idBar WHERE tableBarBiere.idBiere=? AND bar.villeBar=? ORDER BY bar.idBar");
-			stmt.setInt(1,idBiere);
-			stmt.setString(2,ville);
-			ResultSet rs = stmt.executeQuery();
-			ArrayList<Bar> listeBarTotale=new ArrayList<Bar>();
-			while (rs.next()){
-				Bar bar=new Bar(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4));
-				listeBarTotale.add(bar);
-            }
-			return listeBarTotale;
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-	
-	public Bar getBar(int id) {
+	public Bar getUser(int id) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
 			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `bar` WHERE `idBar`=? ");

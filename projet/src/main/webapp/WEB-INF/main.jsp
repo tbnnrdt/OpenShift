@@ -21,7 +21,9 @@
 	</head>
 	
     	<body>
-
+    	<c:import url="menu.jsp"></c:import>
+        
+<div class="bodytest">
         <div class="entete" class="case">
             <div class="status_bar"></div>
             <div class="information">
@@ -29,13 +31,6 @@
             </div>
             <div class="menu">
                 <img class="btn_menu" id="afficher_menu" src="img/menu.png" alt="menu">
-            </div>
-            <div class="menu_deroule">
-                <ul>
-                    <li>Choisir sa Bière</li>
-                    <li>Qui sommes nous?</li>
-                    <li>Contact</li>
-                </ul>
             </div>
             <div class="logo">
                 <img src="img/logo.png" alt="erreurs">
@@ -89,5 +84,8 @@
                 <a href="login" class="btn btn-default demande_log" type="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
             </div>
         </footer>
+    </div>
+    <div id="transBG" class="transBG"></div>
+</div>
 	</body>
 </html>
