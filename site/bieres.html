@@ -13,6 +13,7 @@
         <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)"href="../img/mila.jpg">
        <script src="../bootflat/js/jquery-1.10.1.min.js"></script>
         <script src="../bootstrap/js/bootstrap.js"></script>
+
 		<!--<script src="../bootflat/js/jquery-1.10.1.min.js"></script> -->
         <style type="text/css">
         
@@ -64,6 +65,8 @@
         </style>
         <!--<script src="../bootflat/js/bootstrap.min.js"></script>-->
         <script src="../js/home.js"></script>
+        <script type="text/javascript" src="../js/jquery-latest.js"></script> 
+        <script type="text/javascript" src="../js/jquery.tablesorter.js"></script>
         <!--<script src="../js/main_js.js"></script>-->
 		<title>FindMyBeer</title>
 </head>
@@ -99,10 +102,22 @@ function searchString() {
   	.parent().addClass("success");};
 
 }
+
+$(document).ready(function() 
+    { 
+        $("#myTable").tablesorter(); 
+    } 
+); 
+$(document).ready(function() 
+    { 
+        $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
+    } 
+); 
 </script>
     </center>
    <div class="table_biere present">
-    	<table class="table">
+    	<table class="table tablesorter" id="myTable">
+        <thead>
         	<tr class="active">
             	<th>#</th>
                 <th>Bière</th>
@@ -110,7 +125,8 @@ function searchString() {
                 <th>Degré</th>
                 <th>Prix</th>
             </tr>
-            
+      </thead>
+      <tbody>
             <tr class="active"><td></td><td>
             <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-right:5px;"></span>
             <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="margin-right:0x;"></span>
@@ -155,6 +171,7 @@ function searchString() {
             <a class="modif_biere" id="modif_3" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span></a>
             </td>
             <td>3,7°</td><td>6,5€</td></tr>
+    </tbody>
 		</table>
         </div>
         <button class="btn btn-default btn-lg btn-ajout" id="btn-ajout" type="button" data-toggle="modal" data-target="#myModal_ajout"><span class="glyphicon glyphicon-plus" id="ajout"></span></button>

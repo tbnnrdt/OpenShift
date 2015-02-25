@@ -14,109 +14,87 @@
         <style type="text/css"></style>
         <script src="../bootflat/js/bootstrap.min.js"></script>
         <script src="../js/home.js"></script>
+
         <!--<script src="../js/main_js.js"></script>-->
 		<title>FindMyBeer</title>
 	</head>
 	
-    	<body>
-
-        <div class="entete" class="case">
-            <div class="status_bar"></div>
-            <div class="information">
-                <a href="info.html"><img src="../img/i.png" alt="info"></a>
-            </div>
-            <div class="menu">
-                <img class="btn_menu" id="afficher_menu" src="../img/menu.png" alt="menu">
-            </div>
-            <div class="menu_deroule">
-                <ul>
-                    <li>Choisir sa Bière</li>
-                    <li>Qui sommes nous?</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-            <div class="logo">
-                <img src="../img/logo.png" alt="erreurs">
-            </div>
-            <div class="info">
-                Choisir sa bière
-            </div>
-        </div>
-        
-        
-             
-        <div class="listview">
-            <div class="case">
-                <div class="row">
-                    <div class="col-xs-6 casse">
-                        <span>Latitude</span><br />
-                        <span class="ok_lat"><small>Pas d'info</small></span>
-                    </div>
-                    <div class="col-xs-6 casse">
-                        <span>Longitude</span><br />
-                        <span class="ok_longi"><small>Pas d'info</small></span>
-                    </div>
+	<body>
+        <nav class="menu_deroule">
+            <ul>
+            <li>Menu</li>
+            <li>Menu</li>
+            <li>Menu</li>
+            <li>Menu</li>
+            </ul>
+                <!-- Notre menu -->
+        </nav>
+        <div class="bodytest">
+            <header class="entete" class="case">
+                <div class="status_bar"></div>
+                <div class="information">
+                    <a href="info.html"><img src="../img/i.png" alt="info"></a>
                 </div>
-            </div>
-            
-            <div class="case">
-            
-            <c:forEach var="biere" items="${listeBieres}">
-            <div class="col-xs-12">
-                    <div class="row">
-                         <div class="col-xs-2">
-                            <img src="../img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
-                         </div>
-                         <div class="col-xs-8">
-				 <a class="case" href="bar?id=${biere.idBiere}">
-                	<img src="img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
-                	<span class="titre">${biere.nomBiere}</span>
-                	<span class="infos">${biere.degresBiere}°</span>
-
-                	<img class="fleche" src="img/fleche.png" alt="fleche">
-            </a>			   			
-				
-			 </c:forEach>
+                <div class="menu">
+                    <img class="btn_menu" id="afficher_menu"src="../img/menu.png" alt="menu">
+                </div>
                 
-                            <div class="info_bdd">
-                                <span class="titre">Cuvée des Trolls</span>
-                                <span class="degre">6,9°</span>
-                            </div>
-                        </div>
-                        <div class="col-xs-2">
-                            <img class="fleche" src="../img/fleche.png" alt="fleche">
-                        </div>
-                    </div>
+                
+                
+                <div class="logo">
+                    <img src="../img/logo.png" alt="erreurs">
                 </div>
-        <!-- Ferme Case -->
-            </div>
-            
-            <div class="case">
-                <div class="col-xs-12">
+                <div class="info">
+                    Choisir sa bière
+                </div>
+            </header>
+               
+            <div class="listview">
+                
+                <div class="case">
                     <div class="row">
-                         <div class="col-xs-2">
-                            <img src="../img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
-                         </div>
-                         <div class="col-xs-8">
-                            <div class="info_bdd">
-                                <span class="titre">Amstel</span>
-                                <span class="degre">4,9°</span>
-                            </div>
+                        <div class="col-xs-6 casse">
+                            <span>Latitude</span><br />
+                            <span class="ok_lat"><small>Pas d'info</small></span>
                         </div>
-                        <div class="col-xs-2">
-                            <img class="fleche" src="../img/fleche.png" alt="fleche">
+                        <div class="col-xs-6 casse">
+                            <span>Longitude</span><br />
+                            <span class="ok_longi"><small>Pas d'info</small></span>
                         </div>
                     </div>
                 </div>
-        <!-- Ferme Case -->
-            </div>
+                
+                <div class="case">
+                    <div class="col-xs-12">
+                        <div class="row">
+                             <div class="col-xs-2">
+                                <img src="../img/cuvee_des_trolls.jpg" alt="cuvee" class="img-circle biere">
+                             </div>
+                             <div class="col-xs-8">
+                                <div class="info_bdd">
+                                    <span class="titre">Amstel</span>
+                                    <span class="degre">4,9°</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <img class="fleche" src="../img/fleche.png" alt="fleche">
+                            </div>
+                        </div>
+                    </div>
+            <!-- Ferme Case -->
+				</div>
         <!-- Ferme Listeview -->         
-        </div>
+        	</div>
     
         <footer>
             <div class="col-md-3 col-sm-offset-9 ">
                 <a href="login.html" class="btn btn-default demande_log" type="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
             </div>
         </footer>
+</div>
+<div id="transBG" class="transBG"></div>
+</div>
+
 	</body>
 </html>
+

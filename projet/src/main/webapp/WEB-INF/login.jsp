@@ -65,12 +65,12 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">                                
                                 <div class="row-fluid user-row">
-                                <img src="../img/logo.png" class="img-responsive" alt="Conxole Admin"/>
-                                    <img src="../img/log_engrenage.png" class="img-responsive-engrenage" alt="Conxole Admin"/>
+                                <img src="img/logo.png" class="img-responsive" alt="Conxole Admin"/>
+                                    <img src="img/log_engrenage.png" class="img-responsive-engrenage" alt="Conxole Admin"/>
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <form accept-charset="UTF-8" role="form" method="post" action="choix.html" class="form-signin">
+                                <form accept-charset="UTF-8" role="form" method="post" action="user" class="form-signin">
                                     <fieldset>
                                         <label class="panel-login">
                                             <div class="login_result"></div>
@@ -84,7 +84,7 @@
       											<input type="password" class="form-control" id="passwd" placeholder="Password">
     									</div>
                                         <br></br>
-                                        <input class="btn btn-lg btn-success login" type="submit" id="login" value="Login »">
+                                        <input class="btn btn-lg btn-success login" type="submit" id="login" value="Login">
                                     </fieldset>
                                 </form>
                             </div>

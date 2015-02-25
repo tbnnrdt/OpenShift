@@ -1,3 +1,5 @@
+<%@page pageEncoding="UTF-8" %>
+
 <!doctype html>
 <html class="noselect">
 	<head>
@@ -10,7 +12,7 @@
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link rel="apple-touch-icon" href="../img/fmb.png" />
-        <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)"href="../img/mila.jpg">
+        <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)"href="img/mila.jpg">
        <script src="bootflat/js/jquery-1.10.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
 		<!--<script src="bootflat/js/jquery-1.10.1.min.js"></script> -->
@@ -27,19 +29,19 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">                                
                                 <div class="row-fluid user-row">
-                                <img src="../img/logo.png" class="img-responsive" alt="Conxole Admin"/>
+                                <img src="img/logo.png" class="img-responsive" alt="Conxole Admin"/>
                                 </div>
                             </div>
                             <div class="panel-body">
                             <article>
                             <h5>Bienvenue Thomas</h5>
                             <h3><small>La Faluche (Lille)</small></h3>
-                            <p>Vous pouvez choisir parmis l'un des 4 sous menus afin d'optimiser l'atrativité de votre bar</p>
+                            <p>Vous pouvez choisir parmis l'un des 4 sous menus afin d'optimiser l'atractivité de votre bar</p>
                             </article>
-                               <a href='bieres.html'class="btn btn-default btn-lg" type="button"> Bières proposées</a>
-                               <a class="btn btn-default btn-lg"> Info Bar</a> 
-                               <a class="btn btn-default btn-lg"> Satisfaction Client</a> 
-                               <a class="btn btn-default btn-lg"> Bières Favorites</a>
+                               <a href='bieres_gerant'class="btn btn-default btn-lg" type="button">Bières proposées</a>
+                               <a class="btn btn-default btn-lg">Info Bar</a> 
+                               <a class="btn btn-default btn-lg">Satisfaction Client</a> 
+                               <a class="btn btn-default btn-lg">Bières Favorites</a>
                                
                                	<div class="rating rating2">
                                 <input type="hidden" value="" name="input_star" id="input_star">
@@ -51,7 +53,7 @@
 								</div>
                                 
     
-                               <a class="btn btn-danger" href='login.html'> Deconnexion</a>
+                               <a class="btn btn-danger" href='login'> Deconnexion</a>
                             </div>
                         </div>
                     </div>

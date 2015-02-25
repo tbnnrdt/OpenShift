@@ -3,6 +3,19 @@
 	$('#afficher_menu').click(function(){
 		
 		$('.menu_deroule').toggle('slide');
+		$('.transBG').toggle('slide');
+		$('.bodytest').animate(
+            {"left": "300px"},
+            "fast");
+		//$('.bodytest').css({"position":"relative","left":"300px"});
+		
+		})
+	$('.transBG').click(function(){
+		$('.menu_deroule').toggle('slide');
+		$('.transBG').hide();
+		$('.bodytest').animate(
+            {"left": "0px"},
+            "fast");
 		})
 	$('.demande_log').click(function(){
 		

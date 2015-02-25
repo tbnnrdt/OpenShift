@@ -12,6 +12,16 @@ function successCallback(position){
      $('.ok_lat').text(lat);
 	 $('.ok_longi').text(longi);
 }
+
+$('#header__icon').click(function(e){
+        e.preventDefault();
+        $('body').toggleClass('with--sidebar');
+    });
+
+    /* Je veux pouvoir masquer le menu si on clique sur le cache */
+    $('#site-cache').click(function(e){
+        $('body').removeClass('with--sidebar');
+    })
 });
 /*
 var directionsDisplay;
