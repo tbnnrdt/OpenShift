@@ -53,83 +53,23 @@ public class UserImpl {
 		}
 		return null;
 	}
-	
-	public int ajouteBar(Bar bar){
-		int i=0;
+	public ArrayList<String> getUserPasswd(int id) {
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("INSERT INTO `option`(`idBar`,`nomBar`,`heureOuverture`,`heureFermeture`) VALUES (?,?,?,?)");
-			stmt.setInt(1,bar.getIdBar());
-			stmt.setString(2,bar.getNomBar());
-			stmt.setInt(3,bar.getHeureOuverture());
-			stmt.setInt(4,bar.getHeureFermeture());
-			i=stmt.executeUpdate();
-		
-			return i;
+			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM `user` WHERE `idBar`=? ");
+			stmt.setInt(1,id);
+			ResultSet rs = stmt.executeQuery();
+			rs.next();
+			ArrayList<String> infoLog= new ArrayList<String>();
+			infoLog.add(rs.getString(1));
+			infoLog.add(rs.getString(2));
+			return infoLog;
 
-		} 
-		catch(NullPointerException e){e.printStackTrace();}
-		catch (SQLException e) {
-			
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
-		return i;
-    	
+		return null;
 	}
-
-	 public Integer longueurListeBar(){
-       	int rep=0;
-           try{
-        	   Connection connection = DataSourceProvider.getDataSource().getConnection();
-        	   PreparedStatement stmt = connection.prepareStatement("SELECT COUNT( * ) FROM `bar`");
-               ResultSet rs=stmt.executeQuery();
-               rs.next();
-               rep=rs.getInt(1);
-           }
-           catch (SQLException e) {
-               e.printStackTrace();
-           }
-       	return rep;
-       }
-	 
-
-		public int supprimeBar(int id){
-			int i=0;
-			try {
-				Connection connection = DataSourceProvider.getDataSource().getConnection();
-				PreparedStatement stmt = connection.prepareStatement("DELETE FROM `bar` WHERE `idBar`="+id+"");
-	            i=stmt.executeUpdate();
-			
-				return i;
-
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			return i;
-	    	
-		}
-
-		
-		public ArrayList<String> getListeVille() {
-			String newVille="";
-			try {
-				Connection connection = DataSourceProvider.getDataSource().getConnection();
-				PreparedStatement stmt = connection.prepareStatement("SELECT `villeBar` FROM `bar` ORDER BY `villeBar` ASC");
-				ResultSet rs = stmt.executeQuery();
-				ArrayList<String> listeVilleTotale=new ArrayList<String>();
-				while (rs.next()){
-					if(newVille.equals(rs.getString(1))){}
-					else{
-					newVille=rs.getString(1);
-					listeVilleTotale.add(newVille);
-					}
-	            }
-				return listeVilleTotale;
-
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			return null;
-		}
 
 		
 }
