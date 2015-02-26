@@ -1,1 +1,0 @@
-SELECT barPropose.idBarPropose as Cle, bar.nomBar as Nom, biere.nomBiere as Biere FROM `base-projet`.biere JOIN (`base-projet`.bar JOIN `base-projet`.barPropose ON bar.idBar=barPropose.idBar) ON biere.idBiere=barPropose.idBiere;
