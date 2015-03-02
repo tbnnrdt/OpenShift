@@ -1,2 +1,6 @@
-
-testgame/
+/bin/
+/target/
+.classpath
+.project
+.jsdtscope
+org.eclipse.*
